@@ -1,6 +1,10 @@
 *{
     margin: 0;
 }
+a{
+    text-decoration: none;
+    color: #40403e;
+}
 
 /* colors
 #40403e czarny
@@ -21,7 +25,7 @@ body{
 .content{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 100vh 100vh 10vh;
+    grid-template-rows: 100vh auto 10vh;
     grid-template-areas: 
         "header"
         "main"
@@ -33,12 +37,13 @@ body{
 
 .main{
     grid-area: "main";
-    background-color: #ffe066;
+    background-color: #fbfffb;
 }
 
 .footer{
     grid-area: "footer";
-    background-color: #247ba0;
+    background-color: #40403e;
+    color: #b7bbb7;
 }
 
 
@@ -46,33 +51,47 @@ body{
 
 
 .headingBanner{
+    position: fixed;
     width: 100%;
     height: 10vh;
     background-color: #fbfffb;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    box-shadow: 0px 1px 20px #40403e;
 }
 
 .title h1{
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 .title h2{
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 .headerContent{
     background-color: #fbfffb;
     width: 100%;
-    height: 90vh;
-    background-color: #f25f5c; 
+    height: 100vh;
+    background-color: #f25f5c;
+    background-image: url(img/samsung2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.icons{
+    display: flex;
+}
+
+.icons img{
+    height: 5vh;
+    margin: 0 3vw 0 0;
 }
 
 /* ===================== */
 
 .menuBurger{
-    height: 5.5vh;
-    width: 5.5vh;
+    height: 5vh;
+    width: 5vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -132,10 +151,40 @@ body{
     padding: 0;
 }
 
-.menuLink{
+.menuList{
     list-style-type: none;
+    padding: 2vh;
+}
+.menuLink{
     font-size: 1.3rem;
+    text-decoration: none;
+    color: #40403e;
+}
+
+
+/* =================== */
+
+
+.productTitle{
     margin: 3vh;
+}
+
+.card{
+    background-color: #ffe066;
+    margin: 1vh;
+    height: auto;
+    background-color: #f25f5c;
+}
+
+.card img{
+    width: 100%;
+}
+
+/* =================== */
+
+
+.menuList:hover{
+    border-bottom: 5px solid #40403e;
 }
 
 
@@ -144,9 +193,20 @@ body{
 
 @media(min-width: 1000px){
 
+    .content{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 55vh auto 10vh;
+        grid-template-areas: 
+            "header"
+            "main"
+            "footer";
+    }
 
     .headerContent{
         height: 55vh;
+        background-image: url(img/samsung.jpg);
+        background-size: cover;
     }
     .menuBurger{
         display: none;
@@ -154,8 +214,8 @@ body{
     
     .menuContent{
         width: auto;
-        height: 7vh;
-        padding: 2vh;
+        height: 100%;
+        padding: 0;
         transform: translateX(0);
         border: none;
         position: relative;
@@ -163,11 +223,30 @@ body{
         left: 0;
     }
     .menuMain{
+        margin: 0;
+        padding: 0;
+        height: 100%;
         flex-direction: row;
         justify-content: center;
     }
-    .menuLink{
+    .menuList{
+        box-sizing: border-box;
         margin: 0;
-        padding: 0 2vw 0 2vw;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+    .menuLink{
+        padding: 2vw;
+    }
+
+    .productBox{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 6vw 0 6vw;
+    }
+    .card{
+        height: auto;
+        width: 20vw;
     }
 }
