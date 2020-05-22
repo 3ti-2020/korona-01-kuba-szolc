@@ -49,18 +49,58 @@ body{
 
 /* =================== */
 
+
 .filters{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-top: 3vh;
-    background-color: #70c1b3;
 }
-.filtersButton, .sortButton{
-    width: 100vw;
+
+.filtersButton{
     height: 5vh;
     font-size: 1.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.filtersBox form{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filtersLine{
+    margin: 3%;
+    flex-basis: 100%;
+}
+.zastosuj, .filtersButton{
+    flex-basis: 100%;
+    width: 90%;
+    background-color: #70c1b3;
+    border-radius: 20px
+}
+
+input, select, option{
+    padding: 10px;
+    width: 30%;
+    margin: 1%;
+    border: 1px solid #70c1b3;
+    border-radius: 20px;
+}
+select, option{
+    width: 50%;
+    background-color: #fbfffb;
+}
+
+.sortMenu{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+}
+
 .filtersButton img, .sortButton img{
     height: 3rem;
     width: 2rem;
@@ -90,16 +130,6 @@ body{
 
 @media(min-width: 1000px){
 
-    .content{
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 10vh auto 10vh;
-        grid-template-areas: 
-            "header"
-            "main"
-            "footer";
-    }
-
     .main{
         display: flex;
     }
@@ -127,5 +157,8 @@ body{
     }
     .card{
         width: 20vw;
+    }
+    .filtersLine{
+        margin-left: 5vw;
     }
 }

@@ -170,14 +170,21 @@ body{
 }
 
 .card{
-    background-color: #ffe066;
-    margin: 1vh;
+    padding-bottom: 5vh;
+    margin: 2vw;
+    margin-bottom: 0;
     height: auto;
-    background-color: #f25f5c;
+    border-bottom: 1px solid #b7b7af;
 }
 
 .card img{
     width: 100%;
+}
+.staracena{
+    text-decoration: line-through;
+}
+.promocja{
+    color: #f25f5c;
 }
 
 /* =================== */
@@ -240,13 +247,18 @@ body{
         padding: 2vw;
     }
 
+    .products h1{
+        margin-left: 15%;
+    }
+
     .productBox{
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
-        margin: 0 6vw 0 6vw;
     }
     .card{
         height: auto;
         width: 20vw;
+        flex-basis: 21%;
     }
 }
