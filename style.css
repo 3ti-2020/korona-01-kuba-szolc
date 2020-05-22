@@ -170,6 +170,7 @@ body{
 }
 
 .card{
+    padding: 2vw;
     padding-bottom: 5vh;
     margin: 2vw;
     margin-bottom: 0;
@@ -192,6 +193,9 @@ body{
 
 .menuList:hover{
     border-bottom: 5px solid #40403e;
+}
+.card:hover{
+    box-shadow: 0px 1px 30px #b7bbb7;
 }
 
 
